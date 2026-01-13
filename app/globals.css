@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #030014;
+  --color-foreground: #ffffff;
+  
+  --color-primary: #7042f8;
+  --color-primary-foreground: #ffffff;
+  
+  --color-secondary: #00d4ff;
+  --color-secondary-foreground: #000000;
+  
+  --color-accent: #2a0e61;
+  --color-accent-foreground: #ffffff;
+  
+  --font-sans: var(--font-inter); 
+  --font-heading: var(--font-outfit);
+
+  --animate-spin-slow: spin 6s linear infinite;
+}
+
+/* Custom Utilities if needed */
+@utility glass-card {
+  @apply backdrop-blur-md bg-white/10 border border-white/20 shadow-lg;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), sans-serif;
+}
