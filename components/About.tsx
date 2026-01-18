@@ -45,7 +45,7 @@ export function About() {
                         </div>
 
                         <h2 className="text-3xl md:text-4xl font-bold">
-                            Blending Creativity with <span className="text-primary">Functionality</span>
+                            <span className="text-primary">    </span>
                         </h2>
 
                         <p className="text-gray-300 leading-relaxed text-lg">
@@ -59,14 +59,14 @@ export function About() {
                         </p>
 
                         <div className="pt-6 grid grid-cols-2 gap-6">
-                            <div className="p-4 rounded-2xl bg-white/5 border border-white/10 text-center hover:bg-white/10 transition-colors">
+                            {/* <div className="p-4 rounded-2xl bg-white/5 border border-white/10 text-center hover:bg-white/10 transition-colors">
                                 <h3 className="text-3xl font-bold text-secondary mb-1">UI/UX</h3>
                                 <p className="text-sm text-gray-400">Specialist</p>
-                            </div>
-                            <div className="p-4 rounded-2xl bg-white/5 border border-white/10 text-center hover:bg-white/10 transition-colors">
+                            </div> */}
+                            {/* <div className="p-4 rounded-2xl bg-white/5 border border-white/10 text-center hover:bg-white/10 transition-colors">
                                 <h3 className="text-3xl font-bold text-primary mb-1">Web</h3>
                                 <p className="text-sm text-gray-400">Developer</p>
-                            </div>
+                            </div> */}
                         </div>
                     </motion.div>
 

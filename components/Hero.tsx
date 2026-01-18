@@ -99,9 +99,9 @@ export function Hero() {
                     >
                         {[
                             { icon: Palette, label: "UI/UX Design", desc: "Crafting Interfaces", color: "text-pink-400", bg: "hover:bg-pink-500/10 hover:border-pink-500/30" },
-                            { icon: Code, label: "Development", desc: "Building Logic", color: "text-blue-400", bg: "hover:bg-blue-500/10 hover:border-blue-500/30" },
-                            { icon: Sparkles, label: "Motion", desc: "Adding Life", color: "text-purple-400", bg: "hover:bg-purple-500/10 hover:border-purple-500/30" },
-                            { icon: MousePointer2, label: "Interaction", desc: "Engaging Users", color: "text-cyan-400", bg: "hover:bg-cyan-500/10 hover:border-cyan-500/30" },
+                            { icon: Code, label: "Web design", desc: "Building Logic", color: "text-blue-400", bg: "hover:bg-blue-500/10 hover:border-blue-500/30" },
+                            { icon: Sparkles, label: "Graphic design", desc: "Adding Life", color: "text-purple-400", bg: "hover:bg-purple-500/10 hover:border-purple-500/30" },
+                            { icon: MousePointer2, label: "Logo design", desc: "Engaging Users", color: "text-cyan-400", bg: "hover:bg-cyan-500/10 hover:border-cyan-500/30" },
                         ].map((skill, index) => (
                             <motion.div
                                 key={index}

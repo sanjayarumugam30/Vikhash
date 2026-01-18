@@ -5,45 +5,93 @@ import { Container } from "@/components/ui/container";
 import { motion } from "framer-motion";
 
 const skills = [
-    { category: "Design", items: ["Figma", "Canva", "Photoshop", "Illustrator", "Framer", "CorelDraw"] },
-    { category: "Development", items: ["HTML", "CSS", "JavaScript", "React.js", "Node.js", "MongoDB", "SQL"] },
-    { category: "DevOps & Cloud", items: ["AWS (EC2, S3, RDS)", "DevOps Tools"] },
+  { name: "Figma", level: 95, category: "Design", color: "text-purple-400" },
+  { name: "React", level: 88, category: "Development", color: "text-blue-400" },
+  { name: "Photoshop", level: 85, category: "Design", color: "text-cyan-400" },
+  { name: "JavaScript", level: 90, category: "Development", color: "text-yellow-400" },
+  { name: "UI/UX", level: 92, category: "Design", color: "text-pink-400" },
+  { name: "Next.js", level: 82, category: "Development", color: "text-white" },
+  { name: "Illustrator", level: 80, category: "Design", color: "text-orange-400" },
+  { name: "TypeScript", level: 85, category: "Development", color: "text-blue-300" },
 ];
 
 export function Skills() {
-    return (
-        <Section id="skills" className="relative">
-            <Container>
-                <div className="text-center max-w-2xl mx-auto mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4">My <span className="text-secondary">Skills</span></h2>
-                    <p className="text-gray-400">A comprehensive toolkit for designing and building digital products.</p>
-                </div>
+  return (
+    <Section id="skills" className="relative overflow-hidden">
+      <Container>
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-5xl font-bold mb-4"
+          >
+            Technical <span className="text-secondary">Proficiency</span>
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-gray-400"
+          >
+            Skills measured by expertise and practical experience
+          </motion.p>
+        </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {skills.map((cat, idx) => (
-                        <motion.div
-                            key={idx}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: idx * 0.1 }}
-                            className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-secondary/30 transition-all duration-300 group"
-                        >
-                            <h3 className="text-2xl font-bold mb-6 text-white group-hover:text-secondary transition-colors">{cat.category}</h3>
-                            <div className="flex flex-wrap gap-3">
-                                {cat.items.map((item, i) => (
-                                    <span
-                                        key={i}
-                                        className="px-4 py-2 rounded-full bg-black/40 border border-white/10 text-sm font-medium text-gray-300 hover:text-white hover:border-secondary/50 transition-colors cursor-default"
-                                    >
-                                        {item}
-                                    </span>
-                                ))}
-                            </div>
-                        </motion.div>
-                    ))}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          {skills.map((skill, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1, type: "spring" }}
+              className="relative group"
+            >
+              <div className="relative w-40 h-40 mx-auto">
+                {/* Circular progress */}
+                <svg className="w-full h-full transform -rotate-90">
+                  <circle
+                    cx="80"
+                    cy="80"
+                    r="70"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    fill="none"
+                    className="text-white/10"
+                  />
+                  <circle
+                    cx="80"
+                    cy="80"
+                    r="70"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                    fill="none"
+                    strokeDasharray={440}
+                    strokeDashoffset={440 - (440 * skill.level) / 100}
+                    strokeLinecap="round"
+                    className="text-secondary transition-all duration-1000"
+                  />
+                </svg>
+                
+                {/* Percentage in center */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  <span className={`text-3xl font-bold ${skill.color}`}>
+                    {skill.level}%
+                  </span>
+                  <span className="text-sm text-gray-400 mt-1">
+                    {skill.name}
+                  </span>
+                  <span className="text-xs text-gray-500 mt-1">
+                    {skill.category}
+                  </span>
                 </div>
-            </Container>
-        </Section>
-    );
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </Container>
+    </Section>
+  );
 }
