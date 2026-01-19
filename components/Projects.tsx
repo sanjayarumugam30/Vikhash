@@ -3,7 +3,7 @@
 import { Section } from "@/components/ui/section";
 import { Container } from "@/components/ui/container";
 import { motion } from "framer-motion";
-import { ExternalLink, Layers, Home, Cpu } from "lucide-react";
+import { ExternalLink, Layers, Home, Cpu, ArrowRight } from "lucide-react";
 
 const projects = [
     {
@@ -45,6 +45,9 @@ const projects = [
 ];
 
 export function Projects() {
+    // Your Google Drive link for more projects
+    const googleDriveLink = "https://drive.google.com/drive/folders/YOUR_FOLDER_ID_HERE";
+
     return (
         <Section id="projects">
             <Container>
@@ -95,6 +98,44 @@ export function Projects() {
                         </motion.div>
                     ))}
                 </div>
+
+                {/* View More Button with Google Drive Link */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3 }}
+                    className="flex justify-center mt-16"
+                >
+                    <a
+                        href= "https://drive.google.com/drive/folders/1CcqAQB7qh2nnk0gNCnJltRNwCQ5KeHsc?usp=drive_link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/30 text-white font-medium hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 hover:scale-[1.02]"
+                    >
+                        <span className="relative z-10">
+                            View More Projects
+                        </span>
+                        <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform relative z-10" />
+                        
+                        {/* Gradient background effect */}
+                        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        
+                        {/* Border glow effect */}
+                        <div className="absolute inset-0 rounded-xl border border-transparent group-hover:border-primary/50 transition-all duration-300" />
+                    </a>
+                </motion.div>
+
+                {/* Optional: Description text under the button */}
+                <motion.p
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4 }}
+                    className="text-center text-gray-500 text-sm mt-4"
+                >
+                    Explore more projects and detailed case studies on my Google Drive
+                </motion.p>
             </Container>
         </Section>
     );

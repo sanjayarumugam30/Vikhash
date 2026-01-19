@@ -5,15 +5,13 @@ import { Container } from "@/components/ui/container";
 import { motion } from "framer-motion";
 
 const skills = [
-  { name: "Figma", level: 95, category: "Design", color: "text-purple-400" },
-  { name: "React", level: 88, category: "Development", color: "text-blue-400" },
-  { name: "Photoshop", level: 85, category: "Design", color: "text-cyan-400" },
+  { name: "Figma", level: 80, category: "Design", color: "text-purple-400" },
+  { name: "Photoshop", level: 75, category: "Design", color: "text-cyan-400" },
   { name: "JavaScript", level: 90, category: "Development", color: "text-yellow-400" },
-  { name: "UI/UX", level: 92, category: "Design", color: "text-pink-400" },
-  { name: "Next.js", level: 82, category: "Development", color: "text-white" },
-  { name: "Illustrator", level: 80, category: "Design", color: "text-orange-400" },
-  { name: "TypeScript", level: 85, category: "Development", color: "text-blue-300" },
-];
+  { name: "UI/UX", level: 70, category: "Design", color: "text-pink-400" },
+      { name: "Illustrator", level: 70, category: "Design", color: "text-orange-400" },
+
+  { name: "Canva", level: 95, category: "Design", color: "text-green-400" },];
 
 export function Skills() {
   return (

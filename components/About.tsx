@@ -53,7 +53,7 @@ export function About() {
                             Experienced in building intuitive, user-focused web interfaces with a foundation in front-end development.
                         </p>
 
-                        <p className="text-gray-400 leading-relaxed">
+                        <p className="text-gray-300 leading-relaxed text-lg">
                             My journey involves designing responsive e-commerce websites, real estate platforms, and interactive applications.
                             I am passionate about creating seamless digital experiences that solve real user problems.
                         </p>
