@@ -104,14 +104,7 @@ export function Hero() {
                             View Projects
                         </motion.button>
 
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="px-8 py-3 rounded-full text-white font-semibold border border-white/20 hover:bg-white/10 backdrop-blur-sm transition-all"
-                            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                        >
-                            Contact Us
-                        </motion.button>
+                    
                     </motion.div>
                 </motion.div>
             </Container>
